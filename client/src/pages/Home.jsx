@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 function Home() {
@@ -50,6 +51,7 @@ function Home() {
           </p>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
