@@ -1,10 +1,9 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+
 
 function Home() {
   return (
     <div className="min-h-screen bg-gray-100">
-      <Navbar />
+   
 
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center px-6 py-20 bg-gradient-to-b from-green-900 to-green-700 text-white">
@@ -51,7 +50,7 @@ function Home() {
           </p>
         </div>
       </section>
-      <Footer />
+      
     </div>
   );
 }

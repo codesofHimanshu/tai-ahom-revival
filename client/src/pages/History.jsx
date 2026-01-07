@@ -1,14 +1,31 @@
+import { useEffect, useState } from "react";
+import { fetchDynasties } from "../services/api";
+
 function History() {
+  const [dynasties, setDynasties] = useState([]);
+
+  useEffect(() => {
+    fetchDynasties().then((data) => {
+      setDynasties(data);
+    });
+  }, []);
+
   return (
-    <div className="p-10">
-      <h1 className="text-3xl font-bold text-green-800">
-        History & Dynasties
-      </h1>
-      <p className="mt-4 text-gray-600">
-        This section explores the origin, migration, and dynasties of the Tai Ahom civilization.
-      </p>
+    <div style={{ padding: "20px" }}>
+      <h1>Ahom Dynasty</h1>
+
+      {dynasties.map((d) => (
+        <div key={d._id} style={{ marginTop: "20px" }}>
+          <h2>{d.name}</h2>
+          <p><b>Period:</b> {d.period}</p>
+          <p><b>Founder:</b> {d.founder}</p>
+          <p><b>Capital:</b> {d.capital}</p>
+          <p>{d.description}</p>
+        </div>
+      ))}
     </div>
   );
 }
 
 export default History;
+
