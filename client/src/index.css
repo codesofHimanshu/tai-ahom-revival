@@ -1,3 +1,169 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* ================================
+   TAI AHOM ROYAL THEME – GLOBAL CSS
+   ================================ */
+
+:root {
+  /* Core Colors */
+  --royal-green: #0F3D2E;     /* Assam land & power */
+  --ahom-gold: #C9A227;       /* Royal dynasty */
+  --bronze: #4B3A2A;          /* Monuments & maidams */
+  --bg-light: #F7F6F2;        /* Manuscript feel */
+  --text-dark: #1F2933;
+  --text-muted: #6B7280;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* ---------- LINKS ---------- */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  background-color: var(--royal-green);
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--ahom-gold);
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--ahom-gold);
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+  background-color: var(--royal-green);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+}
+
+.hero-divider {
+  width: 80px;
+  height: 4px;
+  background-color: var(--ahom-gold);
+  margin: 2rem auto 0;
+  border-radius: 2px;
+}
+
+/* ---------- SECTION ---------- */
+.section {
+  padding: 4rem 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--royal-green);
+  margin-bottom: 2rem;
+}
+
+/* ---------- CARDS ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  color: var(--royal-green);
+  margin-bottom: 0.5rem;
+}
+
+.card span {
+  color: var(--ahom-gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.card p {
+  margin-top: 0.8rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background-color: var(--royal-green);
+  color: #e5e7eb;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer p {
+  font-size: 0.9rem;
+}
+
+.footer span {
+  color: var(--ahom-gold);
+}
